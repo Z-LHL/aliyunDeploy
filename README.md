@@ -38,3 +38,41 @@
         您也可以使用命令将项目置于后台运行： node ~/example.js & 
         使用命令查看项目端口是否存在： netstat -tpln
 ```
+
+
+
+#### 二、安装Git （CentOS 7.2 , Git1.8.3.1-x64）<br>
+###### 1. 安装步骤：
+```
+    i:  yun 命令进行安装
+    yum install git 
+```
+```
+    ii:  查看git 版本
+    git --version 
+```
+```
+    iii:  对git进行初始化设置
+    git config --global user.name "tomatocc" (tomatocc是git的用户名) 然后回车即可
+	git config --global user.email "tomatocc@sina.com" (tomatocc@sina.com是git的用户名邮箱) 然后回车即可
+
+```
+```
+    iv:  生成授权证书
+    Git的授权证书是基于公钥和私钥的证书体系，所以需要证书体系 生成证书:（1：表示文件名，2：表示生成证书的密码，3：表示确认密码），然后回车即可
+    ssh-keygen -t rsa -C "tomatocc@sina.com
+```
+```
+    v:  切换到ssh目录下 查看证书是否生成
+    cd ~/.ssh/ 
+```
+```
+    vi:  cat id_rsa.pub 查看公钥内容，并复制公钥内容
+```
+```
+    vii:  进入GitHub网站的 Settings 页面的 【SSH and GPG Keys】-----> 【New SSH Key】 栏添加,将该公钥黏贴到github中的key里面，然后点击【Add SSH Key】
+```
+```
+    viii:  验证git的配置是否正确，是否能链接github
+    ssh git@github.com
+```
