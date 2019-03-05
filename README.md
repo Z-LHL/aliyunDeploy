@@ -21,7 +21,9 @@
 				node -v
 				npm -v
 
-			v: 至此，Node.js环境已安装完毕。软件默认安装在/root/node-v6.9.5-linux-x64/目录下。如果需要将该软件安装到其他目录（如：/opt/node/）下，请进行如下操作:
+			v: 至此，Node.js环境已安装完毕。软件默认安装在/root/node-v6.9.5-linux-x64/
+			目录下。如果需要将
+			该软件安装到其他目录（如：/opt/node/）下，请进行如下操作:
 				mkdir -p /opt/node/
 				mv /root/node-v10.15.2-linux-x64/* /opt/node/
 				rm -f /usr/local/bin/node
